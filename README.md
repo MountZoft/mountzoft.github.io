@@ -8,3 +8,7 @@ MountZoft Labs: Fully Remote Software Company.
 [Animated Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.animatedstickersforwhatsapp)
 
 [Bible Promise Box - Catholic](https://play.google.com/store/apps/details?id=com.inc.mountzoft.randombibleversegeneratorapp)
+
+===============
+
+[Lalettan Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.lalettanstickersforwhatsapp)
