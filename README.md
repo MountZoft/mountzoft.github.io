@@ -15,5 +15,5 @@ Express emotions with stickers in your chats!
 -
 [Lalettan Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.lalettanstickersforwhatsapp) | 
 [Lalettan Stickers Animated](https://play.google.com/store/apps/details?id=com.mountzoft.lalettananimatedstickersforwhatsapp) | 
-[Animated Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.animatedstickersforwhatsapp)
+[Daily Life Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.animatedstickersforwhatsapp)
 
