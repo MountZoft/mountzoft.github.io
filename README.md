@@ -4,7 +4,6 @@ Make Waves!
 
 Our products:
 -
-<br>
 
 [Clicker Pro: Auto Clicker Tap](https://play.google.com/store/apps/details?id=io.auto.tap.hamster.kombat)
 
