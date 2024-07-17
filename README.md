@@ -1,11 +1,20 @@
-# MountZoft
+# MountZoft Studios
 
-MountZoft Labs: Fully Remote Software Company.
+Make Waves!
+
+Our products:
+-
+<br>
+
+[Clicker Pro: Auto Clicker Tap](https://play.google.com/store/apps/details?id=io.auto.tap.hamster.kombat)
+
+[Bible Promise Box - Catholic](https://play.google.com/store/apps/details?id=com.inc.mountzoft.randombibleversegeneratorapp)
 
 [Game of Zeros](https://play.google.com/store/apps/details?id=com.mountzoft.gameofzeros)
 
-[Lalettan Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.lalettanstickersforwhatsapp)
-
+Express emotions with stickers in your chats!
+-
+[Lalettan Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.lalettanstickersforwhatsapp) | 
+[Lalettan Stickers Animated](https://play.google.com/store/apps/details?id=com.mountzoft.lalettananimatedstickersforwhatsapp) | 
 [Animated Stickers](https://play.google.com/store/apps/details?id=com.mountzoft.animatedstickersforwhatsapp)
 
-[Bible Promise Box - Catholic](https://play.google.com/store/apps/details?id=com.inc.mountzoft.randombibleversegeneratorapp)
