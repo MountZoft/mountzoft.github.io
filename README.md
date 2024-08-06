@@ -1,6 +1,6 @@
 # MountZoft Studios
 
-Make Waves!
+Simplifying Your Life
 
 Our products:
 -
