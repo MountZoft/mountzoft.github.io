@@ -5,7 +5,9 @@ Make Waves!
 Our products:
 -
 
-[Clicker Pro: Auto Clicker Tap](https://play.google.com/store/apps/details?id=io.auto.tap.hamster.kombat) [upcoming: Use your phone not by gesture or voice, but simply with your thoughts!]
+[Clicker Pro: Auto Clicker Tap](https://play.google.com/store/apps/details?id=io.auto.tap.hamster.kombat)
+[upcoming: Use your phone not by gesture or voice, but simply with your thoughts!]
+Tap, Swipe, Scroll, Type
 
 [Bible Promise Box - Catholic](https://play.google.com/store/apps/details?id=com.inc.mountzoft.randombibleversegeneratorapp)
 
