@@ -1,4 +1,4 @@
-# MountZoft Studios
+# MountZoft Labs
 
 Simplifying Your Life
 
