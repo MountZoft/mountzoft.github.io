@@ -1,0 +1,87 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Dark Theme Styling */
+  body {
+    background-color: #000000;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Header Styling */
+  header .title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header .subtitle {
+    font-size: 1.25rem;
+    color: #a5a5a5;
+    margin-bottom: 30px;
+  }
+  
+  /* Apps Grid */
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* App Card */
+  .app-card {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .app-card:hover {
+    transform: translateY(0px);
+    box-shadow: 0 5px 15px rgb(255, 81, 0);
+  }
+  
+  .app-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .app-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .app-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #d5d5d5;
+  }
+  
+  .app-link {
+    text-decoration: none;
+    color: #1da1f2;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .app-link:hover {
+    color: #1483d6;
+  }
+  
