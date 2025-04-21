@@ -1,0 +1,92 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
+</head>
+<body class="habit-detail">
+    <header>
+        <h1 id="habitTitle"></h1>
+    </header>
+    <main>
+        <div class="habit-content">
+            <img id="habitQuoteImg" alt="Habit Quote">
+            <section>
+                <h3>Who Should Follow This Habit?</h3>
+                <div id="whoShouldFollow"></div>
+            </section>
+            <section>
+                <h3>Why Should You Follow This Habit?</h3>
+                <div id="whyFollow"></div>
+            </section>
+            <section>
+                <h3>Who Should Not Follow This Habit?</h3>
+                <div id="whoShouldNotFollow"></div>
+            </section>
+            <img id="habitCardImg" alt="Habit Card">
+        </div>
+    </main>
+    <script>
+        // Get habit ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const habitId = urlParams.get('id');
+
+        // Fetch habit data
+        fetch('habit_library.json')
+            .then(response => response.json())
+            .then(data => {
+                const habit = data.find(h => h.habit_id === habitId);
+                if (habit) {
+                    document.getElementById('habitTitle').textContent = habit.habit_name;
+                    document.getElementById('habitQuoteImg').src = habit.habit_quote_url;
+                    document.getElementById('whoShouldFollow').innerHTML = habit.who_should_follow_habit;
+                    document.getElementById('whyFollow').innerHTML = habit.why_should_you_follow_habit;
+                    document.getElementById('whoShouldNotFollow').innerHTML = habit.who_should_not_follow_habit;
+                    document.getElementById('habitCardImg').src = habit.habit_card_img_url;
+                }
+            });
+    </script>
+</body>
+</html>

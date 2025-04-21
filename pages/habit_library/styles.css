@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: #ffffff;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    font-size: 1rem;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #888;
+}
+
+.tag-container {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.5rem;
+    justify-content: center;
+    scrollbar-width: none;
+}
+
+.tag-container::-webkit-scrollbar {
+    display: none;
+}
+
+.tag-chip {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tag-chip.active, .tag-chip:hover {
+    background-color: #6200ea;
+}
+
+.habit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.habit-card {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.habit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.habit-card:hover::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.habit-card h2 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.habit-detail main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.habit-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 1rem 0;
+}
+
+.habit-content section {
+    margin: 2rem 0;
+}
+
+.habit-content h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.habit-content p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .habit-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .habit-card h2 {
+        font-size: 1rem;
+    }
+
+    .habit-content h3 {
+        font-size: 1.2rem;
+    }
+}

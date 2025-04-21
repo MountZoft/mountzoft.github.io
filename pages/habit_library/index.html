@@ -1,0 +1,132 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABIT LIBRARY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
+</head>
+<body>
+    <header>
+        <h1>HABIT LIBRARY</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search habits...">
+        </div>
+        <div class="tag-container" id="tagContainer">
+            <button class="tag-chip active" data-tag="all">All</button>
+        </div>
+    </header>
+    <main>
+        <div class="habit-grid" id="habitGrid"></div>
+    </main>
+    <script>
+        let habitsData = [];
+        let allTags = new Set(['all']);
+
+        // Fetch habit data
+        fetch('habit_library.json')
+            .then(response => response.json())
+            .then(data => {
+                habitsData = data;
+                habitsData.forEach(habit => {
+                    habit.tags.forEach(tag => allTags.add(tag.tag_id));
+                });
+                renderTags();
+                renderHabits('all');
+            });
+
+        // Render tag chips
+        function renderTags() {
+            const tagContainer = document.getElementById('tagContainer');
+            allTags.forEach(tag => {
+                const chip = document.createElement('button');
+                chip.className = `tag-chip ${tag === 'all' ? 'active' : ''}`;
+                chip.dataset.tag = tag;
+                chip.textContent = tag === 'all' ? 'All' : habitsData
+                    .flatMap(h => h.tags)
+                    .find(t => t.tag_id === tag)?.tag_name || tag;
+                chip.addEventListener('click', () => {
+                    document.querySelectorAll('.tag-chip').forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                    renderHabits(tag);
+                });
+                tagContainer.appendChild(chip);
+            });
+        }
+
+        // Render habits based on tag or search
+        function renderHabits(selectedTag, searchQuery = '') {
+            const habitGrid = document.getElementById('habitGrid');
+            habitGrid.innerHTML = '';
+            let filteredHabits = habitsData;
+
+            if (searchQuery) {
+                filteredHabits = habitsData.filter(habit =>
+                    habit.habit_name.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+            } else if (selectedTag !== 'all') {
+                filteredHabits = habitsData.filter(habit =>
+                    habit.tags.some(tag => tag.tag_id === selectedTag)
+                );
+            }
+
+            filteredHabits.forEach(habit => {
+                const card = document.createElement('a');
+                card.className = 'habit-card';
+                card.href = `habit.html?id=${habit.habit_id}`;
+                card.target = '_blank';
+                card.style.backgroundImage = `url(${habit.thumbnail_url})`;
+                card.innerHTML = `<h2>${habit.habit_name}</h2>`;
+                habitGrid.appendChild(card);
+            });
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            document.querySelectorAll('.tag-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector('.tag-chip[data-tag="all"]').classList.add('active');
+            renderHabits('all', e.target.value);
+        });
+    </script>
+</body>
+</html>
