@@ -44,15 +44,14 @@ h1 {
     gap: 0.5rem;
     overflow-x: auto;
     padding: 0.5rem;
-    justify-content: flex-start; /* Changed to allow scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth touch scrolling on iOS */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    white-space: nowrap; /* Prevent wrapping unless specified */
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    white-space: nowrap;
 }
 
-/* Ensure scrollbar is hidden but scrolling works */
 .tag-container::-webkit-scrollbar {
-    height: 6px; /* Small scrollbar for touch devices */
+    height: 6px;
 }
 
 .tag-container::-webkit-scrollbar-thumb {
@@ -64,13 +63,12 @@ h1 {
     background: #333;
 }
 
-/* On very small screens, allow wrapping */
 @media (max-width: 400px) {
     .tag-container {
         flex-wrap: wrap;
         justify-content: center;
-        overflow-x: hidden; /* Disable horizontal scrolling if wrapping */
-        white-space: normal; /* Allow wrapping */
+        overflow-x: hidden;
+        white-space: normal;
     }
 }
 
@@ -83,7 +81,7 @@ h1 {
     font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    flex: 0 0 auto; /* Prevent shrinking */
+    flex: 0 0 auto;
 }
 
 .tag-chip.active, .tag-chip:hover {
@@ -136,8 +134,6 @@ h1 {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-
-
 .habit-detail main {
     max-width: 800px;
     margin: 0 auto;
@@ -189,7 +185,7 @@ h1 {
 
 .habit-card-image {
     width: 50%;
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 4 / 5; /* Updated to match 4:5 ratio */
     object-fit: cover;
     border-radius: 12px;
 }
@@ -213,9 +209,23 @@ h1 {
 
     .habit-top-section {
         flex-direction: column;
+        gap: 0.5rem; /* Reduced gap for tighter spacing on small screens */
     }
 
     .habit-top-section .habit-image {
         max-width: 100%;
+        width: 100%; /* Ensure full width on small screens */
+    }
+
+    .habit-who-follow {
+        margin-top: 0.5rem;
+    }
+
+    .habit-card-image {
+        width: 100%; /* Full width on small screens for better visibility */
+    }
+
+    .habit-content section {
+        margin: 0.5rem 0; /* Reduced margin for compact layout */
     }
 }
