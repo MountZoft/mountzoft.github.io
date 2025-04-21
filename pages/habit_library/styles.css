@@ -148,6 +148,12 @@ h1 {
 
 .habit-top-section {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.habit-top-content {
+    display: flex;
     gap: 1rem;
     align-items: flex-start;
 }
@@ -159,7 +165,7 @@ h1 {
     border-radius: 12px;
 }
 
-.habit-top-section .habit-image {
+.habit-top-content .habit-image {
     flex: 0 0 40%;
     max-width: 300px;
 }
@@ -209,12 +215,17 @@ h1 {
 
     .habit-top-section {
         flex-direction: column;
-        gap: 0.5rem; /* Reduced gap for tighter spacing on small screens */
+        gap: 0.5rem;
     }
 
-    .habit-top-section .habit-image {
+    .habit-top-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .habit-top-content .habit-image {
         max-width: 100%;
-        width: 100%; /* Ensure full width on small screens */
+        width: 100%;
     }
 
     .habit-who-follow {
@@ -222,10 +233,10 @@ h1 {
     }
 
     .habit-card-image {
-        width: 100%; /* Full width on small screens for better visibility */
+        width: 100%;
     }
 
     .habit-content section {
-        margin: 0.5rem 0; /* Reduced margin for compact layout */
+        margin: 0.5rem 0;
     }
 }
