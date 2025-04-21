@@ -64,7 +64,7 @@ h1 {
 }
 
 .tag-chip.active, .tag-chip:hover {
-    background-color: #6200ea;
+    background-color: #ff6600;
 }
 
 .habit-grid {
