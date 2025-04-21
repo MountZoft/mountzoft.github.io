@@ -42,7 +42,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Habit Details</title>
+<title id="habitBlogTitle"></title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
 </head>
@@ -68,7 +68,9 @@
             <h3 id="whoShouldNotFollowTitle"></h3>
             <div id="whoShouldNotFollow"></div>
         </section>
-        <img id="habitCardImg" alt="Habit Card" class="habit-card-image">
+        <a href="https://play.google.com/store/apps/details?id=habit.tracker.habitcard" target="_blank">
+            <img id="habitCardImg" alt="Habit Card" class="habit-card-image">
+        </a>
     </div>
 </main>
 <script>
@@ -82,6 +84,7 @@
         .then(data => {
             const habit = data.find(h => h.habit_id === habitId);
             if (habit) {
+                document.getElementById('habitBlogTitle').textContent = habit.habit_name;
                 document.getElementById('habitTitle').textContent = habit.habit_name;
                 document.getElementById('habitThumbnail').src = habit.thumbnail_url;
                 document.getElementById('whoShouldFollowTitle').innerHTML = habit.who_should_follow_habit_title;
