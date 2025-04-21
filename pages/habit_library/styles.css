@@ -184,7 +184,7 @@ h1 {
 }
 
 .habit-card-image {
-    width: 50%;
+    width: 30%;
     aspect-ratio: 4 / 5; /* Updated to match 4:5 ratio */
     object-fit: cover;
     border-radius: 12px;
