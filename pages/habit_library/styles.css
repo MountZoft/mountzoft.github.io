@@ -44,12 +44,34 @@ h1 {
     gap: 0.5rem;
     overflow-x: auto;
     padding: 0.5rem;
-    justify-content: center;
-    scrollbar-width: none;
+    justify-content: flex-start; /* Changed to allow scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth touch scrolling on iOS */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    white-space: nowrap; /* Prevent wrapping unless specified */
 }
 
+/* Ensure scrollbar is hidden but scrolling works */
 .tag-container::-webkit-scrollbar {
-    display: none;
+    height: 6px; /* Small scrollbar for touch devices */
+}
+
+.tag-container::-webkit-scrollbar-thumb {
+    background: #6200ea;
+    border-radius: 3px;
+}
+
+.tag-container::-webkit-scrollbar-track {
+    background: #333;
+}
+
+/* On very small screens, allow wrapping */
+@media (max-width: 400px) {
+    .tag-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: hidden; /* Disable horizontal scrolling if wrapping */
+        white-space: normal; /* Allow wrapping */
+    }
 }
 
 .tag-chip {
@@ -61,6 +83,7 @@ h1 {
     font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    flex: 0 0 auto; /* Prevent shrinking */
 }
 
 .tag-chip.active, .tag-chip:hover {
