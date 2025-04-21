@@ -55,7 +55,7 @@
             <div class="habit-top-content">
                 <img id="habitQuoteImg" alt="Habit Quote" class="habit-image">
                 <section class="habit-who-follow">
-                    <h3>Who Should Follow This Habit?</h3>
+                    <h3 id="whoShouldFollowTitle"></h3>
                     <div id="whoShouldFollow"></div>
                 </section>
             </div>
@@ -84,6 +84,7 @@
             if (habit) {
                 document.getElementById('habitTitle').textContent = habit.habit_name;
                 document.getElementById('habitQuoteImg').src = habit.habit_quote_url;
+                document.getElementById('whoShouldFollowTitle').innerHTML = "Who should follow" + habit.habit_name;
                 document.getElementById('whoShouldFollow').innerHTML = habit.who_should_follow_habit;
                 document.getElementById('whyFollow').innerHTML = habit.why_should_you_follow_habit;
                 document.getElementById('whoShouldNotFollow').innerHTML = habit.who_should_not_follow_habit;
