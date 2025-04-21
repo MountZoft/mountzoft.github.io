@@ -53,7 +53,7 @@
         <div class="habit-top-section">
             <h1 id="habitTitle"></h1>
             <div class="habit-top-content">
-                <img id="habitQuoteImg" alt="Habit Quote" class="habit-image">
+                <img id="habitThumbnail" alt="Habit Quote" class="habit-image">
                 <section class="habit-who-follow">
                     <h3 id="whoShouldFollowTitle"></h3>
                     <div id="whoShouldFollow"></div>
@@ -83,12 +83,12 @@
             const habit = data.find(h => h.habit_id === habitId);
             if (habit) {
                 document.getElementById('habitTitle').textContent = habit.habit_name;
-                document.getElementById('habitQuoteImg').src = habit.habit_quote_url;
-                document.getElementById('whoShouldFollowTitle').innerHTML = "Who should follow " + habit.habit_name.toLowerCase() + "?";
+                document.getElementById('habitThumbnail').src = habit.thumbnail_url;
+                document.getElementById('whoShouldFollowTitle').innerHTML = habit.who_should_follow_habit_title;
                 document.getElementById('whoShouldFollow').innerHTML = habit.who_should_follow_habit;
-                document.getElementById('whyFollowTitle').innerHTML = "Why you should follow " + habit.habit_name.toLowerCase() + "?";
+                document.getElementById('whyFollowTitle').innerHTML = habit.why_should_you_follow_habit_title;
                 document.getElementById('whyFollow').innerHTML = habit.why_should_you_follow_habit;
-                document.getElementById('whoShouldNotFollowTitle').innerHTML = "Who should not follow " + habit.habit_name.toLowerCase() + "?";
+                document.getElementById('whoShouldNotFollowTitle').innerHTML = habit.who_should_not_follow_habit_title;
                 document.getElementById('whoShouldNotFollow').innerHTML = habit.who_should_not_follow_habit;
                 document.getElementById('habitCardImg').src = habit.habit_card_img_url;
             }
