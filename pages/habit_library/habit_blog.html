@@ -84,9 +84,11 @@
             if (habit) {
                 document.getElementById('habitTitle').textContent = habit.habit_name;
                 document.getElementById('habitQuoteImg').src = habit.habit_quote_url;
-                document.getElementById('whoShouldFollowTitle').innerHTML = "Who should follow" + habit.habit_name;
+                document.getElementById('whoShouldFollowTitle').innerHTML = "Who should follow " + habit.habit_name.toLowerCase();
                 document.getElementById('whoShouldFollow').innerHTML = habit.who_should_follow_habit;
+                document.getElementById('whyFollowTitle').innerHTML = "Why you should follow " + habit.habit_name.toLowerCase();
                 document.getElementById('whyFollow').innerHTML = habit.why_should_you_follow_habit;
+                document.getElementById('whoShouldNotFollowTitle').innerHTML = "Who should not follow " + habit.habit_name.toLowerCase();
                 document.getElementById('whoShouldNotFollow').innerHTML = habit.who_should_not_follow_habit;
                 document.getElementById('habitCardImg').src = habit.habit_card_img_url;
             }
