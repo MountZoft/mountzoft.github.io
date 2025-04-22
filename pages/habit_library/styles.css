@@ -171,6 +171,17 @@ h1 {
     max-width: 300px;
 }
 
+.habit-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.placeholder {
+    background-color: #ccc;
+    border-radius: 12px;
+}
+
 .habit-who-follow {
     flex: 1;
 }
