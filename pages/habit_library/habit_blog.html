@@ -100,7 +100,7 @@
                 const habit = data.find(h => h.habit_id === habitId);
                 if (habit) {
                     document.getElementById('habitBlogTitle').textContent = habit.habit_name;
-                    document.getElementById('habitTitle').textContent = habit.habit_name;
+                    document.getElementById('habitTitle').textContent = habit.habit_blog_title;
                     document.getElementById('habitThumbnail').src = habit.thumbnail_url;
                     document.getElementById('whoShouldFollowTitle').innerHTML = habit.who_should_follow_habit_title;
                     document.getElementById('whoShouldFollow').innerHTML = habit.who_should_follow_habit;
