@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="metaDescription" content="">
+    <meta name="keywords" id="metaKeywords" content="">
+    <meta name="author" content="Habit Tracker - Habit Card by Jithin">
+    <meta name="robots" content="index, follow">
     <title id="habitBlogTitle"></title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
@@ -66,6 +70,11 @@
             .then(data => {
                 const habit = data.find(h => h.habit_id === habitId);
                 if (habit) {
+                    document.getElementById('metaDescription').setAttribute('content', habit.habit_blog_title);
+
+                    const tags = habit.tags.map(tag => tag.tag_name).join(', ');
+                    document.getElementById('metaKeywords').setAttribute('content', tags);
+
                     document.getElementById('habitBlogTitle').textContent = habit.habit_name;
                     document.getElementById('habitTitle').textContent = habit.habit_blog_title;
                     const habitThumbnail = document.getElementById('habitThumbnail');
