@@ -64,6 +64,10 @@
                 </div>
             </div>
             <section>
+                <h3>Custom Content Data Top</h3>
+                <div id="customContentDataTop"></div>
+            </section>
+            <section>
                 <h3 id="section2Title"></h3>
                 <div id="section2"></div>
             </section>
@@ -109,6 +113,10 @@
                     document.getElementById('section3Title').innerHTML = habit.section_3_title;
                     document.getElementById('section3').innerHTML = habit.section_3;
                     document.getElementById('habitCardImg').src = habit.habit_card_img_url;
+
+                    if (habit.content_data) {
+                        document.getElementById('customContentDataTop').innerHTML = habit.custom_content_data_top;
+                    }
                 }
             });
     </script>
