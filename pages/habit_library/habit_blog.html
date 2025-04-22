@@ -64,7 +64,6 @@
                 </div>
             </div>
             <section>
-                <h3>Custom Content Data Top</h3>
                 <div id="customContentDataTop"></div>
             </section>
             <section>
@@ -74,6 +73,9 @@
             <section>
                 <h3 id="section3Title"></h3>
                 <div id="section3"></div>
+            </section>
+            <section>
+                <div id="customContentDataBottom"></div>
             </section>
             <a href="https://play.google.com/store/apps/details?id=habit.tracker.habitcard">
                 <img id="habitCardImg" alt="Habit Card" class="habit-card-image">
@@ -116,6 +118,9 @@
 
                     if (habit.custom_content_data_top) {
                         document.getElementById('customContentDataTop').innerHTML = habit.custom_content_data_top;
+                    }
+                    if (habit.custom_content_data_bottom) {
+                        document.getElementById('customContentDataBottom').innerHTML = habit.custom_content_data_bottom;
                     }
                 }
             });
