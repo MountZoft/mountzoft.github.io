@@ -84,7 +84,8 @@ h1 {
     flex: 0 0 auto;
 }
 
-.tag-chip.active, .tag-chip:hover {
+.tag-chip.active,
+.tag-chip:hover {
     background-color: #ff6600;
 }
 
@@ -191,9 +192,38 @@ h1 {
 
 .habit-card-image {
     width: 30%;
-    aspect-ratio: 3 / 5; /* Updated to match 4:5 ratio */
+    aspect-ratio: 3 / 5;
+    /* Updated to match 4:5 ratio */
     object-fit: cover;
     border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000000;
+    padding: 1.5rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-content p {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.play-store-badge {
+    height: 50px;
+    width: auto;
 }
 
 @media (max-width: 600px) {
@@ -238,5 +268,20 @@ h1 {
 
     .habit-content section {
         margin: 0.5rem 0;
+    }
+
+    /* FOOTER */
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+    }
+
+    .play-store-badge {
+        height: 40px;
     }
 }
