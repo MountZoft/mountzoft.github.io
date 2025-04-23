@@ -68,29 +68,29 @@
   {
     "habit_id": "meditate",
     "habit_name": "Meditate",
-    "habit_blog_title": "dummy",
+    "habit_blog_title": "A Simple Guide to Starting Meditation",
     "thumbnail_url": "https://i.pinimg.com/736x/c3/e6/b7/c3e6b7c8ab10bebc56d20ad65c98e7d5.jpg",
     "custom_content_data_top": "",
-    "section_1_title": "",
-    "section_1": "",
-    "section_2_title": "",
-    "section_2": "",
-    "section_3_title": "",
-    "section_3": "",
+    "section_1_title": "At What Age Should You Start Meditation?",
+    "section_1": "<p>You can start meditation at any age. Even children as young as 5 can benefit from simple breathing or mindfulness exercises. Starting young helps build emotional control, focus, and calmness early in life.</p><p>However, it’s never too late to begin; teens, adults, and seniors can all experience reduced stress, better sleep, and improved mental clarity through meditation. Just choose a method that suits your age and comfort level.</p>",
+    "section_2_title": "How Long Should a Beginner Meditate?",
+    "section_2": "Beginners should meditate for 5 to 10 minutes daily. As you get comfortable, you can increase the time to 15 or 20 minutes. Consistency matters more than duration. A few minutes every day is more helpful than long sessions once in a while.",
+    "section_3_title": "Types of Meditation and Choosing the Right One",
+    "section_3": "<p><span class=\"highlight-montserrat-bold\">Mindfulness meditation</span> enhances focus and reduces stress, ideal for beginners. <span class=\"highlight-montserrat-bold\">Guided meditation</span> uses audio for relaxation, great for those needing structure. <span class=\"highlight-montserrat-bold\">Transcendental meditation</span> involves mantras for deep calm, suiting experienced practitioners. <span class=\"highlight-montserrat-bold\">Loving-kindness meditation</span> fosters compassion, perfect for emotional growth.</p><p>If you're a beginner, mindfulness is a good place to start.</p>",
     "custom_content_data_bottom": "",
-    "habit_card_img_url": "https://i.pinimg.com/736x/8a/74/22/8a7422c6b172b9d2c76d1569d27156db.jpg",
+    "habit_card_img_url": "https://i.pinimg.com/736x/13/86/1a/13861ae3ad0414259da9886d06c9b813.jpg",
     "tags": [
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "mental_wellness",
+        "tag_name": "Mental Wellness"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "self_awareness",
+        "tag_name": "Self-Awareness"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "inner_peace",
+        "tag_name": "Inner Peace"
       }
     ]
   },
