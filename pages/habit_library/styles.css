@@ -237,6 +237,11 @@ footer {
     width: auto;
 }
 
+.highlight-montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
 @media (max-width: 600px) {
     h1 {
         font-size: 1.8rem;
