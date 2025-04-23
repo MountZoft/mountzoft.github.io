@@ -55,7 +55,7 @@ h1 {
 }
 
 .tag-container::-webkit-scrollbar-thumb {
-    background: #ffffff;
+    background: #888;
     border-radius: 3px;
 }
 
