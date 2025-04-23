@@ -29,14 +29,14 @@
                     </section>
                 </div>
             </div>
-            <section>
+            <section id="customContentSectionTop" style="display: none;">
                 <div id="customContentDataTop"></div>
             </section>
             <section>
                 <h3 id="section2Title"></h3>
                 <div id="section2"></div>
             </section>
-            <section>
+            <section id="customContentSectionBottom" style="display: none;">
                 <div id="customContentDataBottom"></div>
             </section>
             <section>
@@ -92,9 +92,11 @@
 
                     if (habit.custom_content_data_top) {
                         document.getElementById('customContentDataTop').innerHTML = habit.custom_content_data_top;
+                        document.getElementById('customContentSectionTop').style.display = 'block';
                     }
                     if (habit.custom_content_data_bottom) {
                         document.getElementById('customContentDataBottom').innerHTML = habit.custom_content_data_bottom;
+                        document.getElementById('customContentSectionBottom').style.display = 'block';
                     }
                 }
             });
