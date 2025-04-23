@@ -39,29 +39,29 @@
   {
     "habit_id": "brush_teeth",
     "habit_name": "Brush Teeth",
-    "habit_blog_title": "dummy",
+    "habit_blog_title": "Brush Your Teeth Twice Daily",
     "thumbnail_url": "https://i.pinimg.com/736x/4d/2c/3f/4d2c3fb242961028b0f1f72b0983a85e.jpg",
     "custom_content_data_top": "",
-    "section_1_title": "",
-    "section_1": "",
-    "section_2_title": "",
-    "section_2": "",
-    "section_3_title": "",
-    "section_3": "",
+    "section_1_title": "Why Should You Brush Your Teeth Twice a Day?",
+    "section_1": "<p>Brushing in the morning helps remove bacteria that build up overnight.</p><p>Brushing at night clears away food particles and plaque from the day.</p><p>This habit helps prevent tooth decay, gum disease, and bad breath. If you eat sugary or acidic foods, wait 30 minutes before brushing to protect your enamel.</p>",
+    "section_2_title": "How Long Should I Brush My Teeth?",
+    "section_2": "You should brush your teeth for two full minutes each time. Divide the time into 30 seconds for each section: upper left, upper right, lower left, and lower right. Use gentle, circular motions and make sure to clean all surfaces-outer, inner, and chewing sides. Set a timer or play a short song to keep track of time.",
+    "section_3_title": "Normal v/s Electric Toothbrushes",
+    "section_3": "<p>Electric toothbrushes often remove more plaque and make brushing easier. They also help maintain the correct brushing time.</p> <p>Manual toothbrushes are cheaper and don’t need charging, but they require more effort and technique.</p>",
     "custom_content_data_bottom": "",
     "habit_card_img_url": "https://i.pinimg.com/736x/8a/74/22/8a7422c6b172b9d2c76d1569d27156db.jpg",
     "tags": [
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "hygiene",
+        "tag_name": "Hygiene"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "morning",
+        "tag_name": "Morning"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "self_care",
+        "tag_name": "Self-Care"
       }
     ]
   },
