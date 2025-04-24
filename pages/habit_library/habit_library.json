@@ -213,29 +213,33 @@
   {
     "habit_id": "sauna",
     "habit_name": "Sauna",
-    "habit_blog_title": "dummy",
+    "habit_blog_title": "A Warm Path to Better Health",
     "thumbnail_url": "https://i.pinimg.com/736x/a2/86/c3/a286c3c1f4bb65b7a00bf048c0212635.jpg",
     "custom_content_data_top": "",
-    "section_1_title": "",
-    "section_1": "",
-    "section_2_title": "",
-    "section_2": "",
-    "section_3_title": "",
-    "section_3": "",
-    "custom_content_data_bottom": "",
-    "habit_card_img_url": "https://i.pinimg.com/736x/8a/74/22/8a7422c6b172b9d2c76d1569d27156db.jpg",
+    "section_1_title": "What are the effects of sauna in my body?",
+    "section_1": "Sitting in a sauna raises your body temperature, which increases blood flow and makes you sweat. This helps relax muscles, ease joint pain, and reduce stress. Saunas may also improve heart health, support better sleep, and help your body flush out toxins through sweating. After a session, most people feel calm, refreshed, and relaxed.",
+    "section_2_title": "How often should you do sauna?",
+    "section_2": "For most people, 2 to 3 times a week is a good start. If you’re healthy and enjoy it, daily sauna use can also be safe. Just listen to your body; if you feel tired or dizzy, take a break. Regular use builds tolerance and gives better results over time.",
+    "section_3_title": "How long do you have to do sauna?",
+    "section_3": "A typical sauna session lasts between 10 to 20 minutes. Beginners should start with 5 to 10 minutes and increase gradually. Don’t stay in too long; your body needs time to cool down afterward.",
+    "custom_content_data_bottom": "<p>In <span class=\"highlight-montserrat-bold\">Finland</span>, try <span class=\"highlight-montserrat-bold\">Löyly</span> in Helsinki or traditional public saunas like <span class=\"highlight-montserrat-bold\">Kotiharjun Sauna</span>. In <span class=\"highlight-montserrat-bold\">Sweden</span>, visit <span class=\"highlight-montserrat-bold\">Centralbadet</span> in Stockholm or lakeside saunas in the countryside. In <span class=\"highlight-montserrat-bold\">Norway</span>, check out <span class=\"highlight-montserrat-bold\">KOK Oslo</span> (floating saunas) or <span class=\"highlight-montserrat-bold\">Badehuset</span> in Tromsø. All three countries offer public saunas, hotel spas, and wellness centers—sauna is a big part of their culture.</p>",
+    "habit_card_img_url": "https://i.pinimg.com/736x/7a/46/65/7a46652797bf3f460a4cefe7af11d5c7.jpg",
     "tags": [
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "physical",
+        "tag_name": "Physical"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "relaxation",
+        "tag_name": "Relaxation"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "self_care",
+        "tag_name": "Self-Care"
+      },
+      {
+        "tag_id": "sleep",
+        "tag_name": "Sleep"
       }
     ]
   },
