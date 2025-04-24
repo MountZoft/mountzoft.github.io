@@ -184,29 +184,29 @@
   {
     "habit_id": "plank",
     "habit_name": "Plank",
-    "habit_blog_title": "dummy",
+    "habit_blog_title": "Plank: A Simple Move with Big Benefits",
     "thumbnail_url": "https://i.pinimg.com/736x/38/e5/42/38e542e78f3a7fd8f0d05f2f28db8549.jpg",
     "custom_content_data_top": "",
-    "section_1_title": "",
-    "section_1": "",
-    "section_2_title": "",
-    "section_2": "",
-    "section_3_title": "",
-    "section_3": "",
+    "section_1_title": "What actually happens in your body when you plank?",
+    "section_1": "<p>When you do a plank, your core muscles work hard to keep your body stable. This includes your abs, lower back, shoulders, and even your legs. Holding the position builds strength and endurance. Your posture improves, and your spine gets better support.</p> <p>Planking also helps burn calories by activating multiple muscle groups at once without needing any equipment.</p>",
+    "section_2_title": "How long do you have to do a plank?",
+    "section_2": "Start with 20–30 seconds and increase slowly over time. Even short planks done daily can make a big difference. Aim for 1 to 2 minutes a day as a goal. Quality matters more than time—keep your form tight with a straight back, engaged core, and level hips. Overdoing it with bad form can hurt more than help.",
+    "section_3_title": "Types of planks and their needs",
+    "section_3": "<ul><li><span class=\"highlight-montserrat-bold\">Standard Plank:</span> Builds core strength and improves balance. Can be done on forearms or hands.</li><li><span class=\"highlight-montserrat-bold\">Side Plank:</span> Targets side abs (obliques) and strengthens the shoulders.</li><li><span class=\"highlight-montserrat-bold\">Reverse Plank:</span> Works the back, glutes, and hamstrings. Good for posture and flexibility.</li><li><span class=\"highlight-montserrat-bold\">Plank with Leg Lift:</span> Adds intensity, boosts balance, and engages deeper core muscles.</li></ul>",
     "custom_content_data_bottom": "",
-    "habit_card_img_url": "https://i.pinimg.com/736x/8a/74/22/8a7422c6b172b9d2c76d1569d27156db.jpg",
+    "habit_card_img_url": "https://i.pinimg.com/736x/b6/9a/e8/b69ae84fd47de612730fd28ee547683a.jpg",
     "tags": [
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "physical",
+        "tag_name": "Physical"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "fitness",
+        "tag_name": "Fitness"
       },
       {
-        "tag_id": "dummy",
-        "tag_name": "dummy"
+        "tag_id": "workout",
+        "tag_name": "Workout"
       }
     ]
   },
