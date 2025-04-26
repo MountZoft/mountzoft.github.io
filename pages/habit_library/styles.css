@@ -100,6 +100,7 @@ h1 {
 
 .habit-card {
     position: relative;
+    aspect-ratio: 4 / 5;
     background-size: cover;
     background-position: center;
     display: flex;
