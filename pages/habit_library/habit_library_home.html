@@ -131,10 +131,7 @@
                 card.href = `habit_blog.html?id=${habit.habit_id}`;
                 card.target = '_blank';
                 card.style.backgroundImage = `url(${habit.thumbnail_url})`;
-                card.innerHTML = `
-                <h2>${habit.habit_name}</h2>
-                <p class="habit-subtitle">${habit.habit_blog_title}</p>
-                `;
+                card.innerHTML = `<h2>${habit.habit_name}</h2>`;
                 habitGrid.appendChild(card);
             });
         }
