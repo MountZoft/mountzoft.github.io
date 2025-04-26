@@ -138,6 +138,7 @@
                 card.target = '_blank';
                 card.style.backgroundImage = `url(${habit.thumbnail_url})`;
                 card.innerHTML = `
+                    <div class="overlay"></div>
                     <div class="habit-text">
                         <h2>${habit.habit_name}</h2>
                         <p class="habit-subtitle">${habit.habit_blog_title}</p>
