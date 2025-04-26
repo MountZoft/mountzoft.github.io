@@ -109,11 +109,19 @@ h1 {
     color: #fff;
     border-radius: 8px;
     text-decoration: none;
+    overflow: hidden;
 }
 
-.habit-text {
-    padding: 8px 12px;
-    max-width: 90%;
+.habit-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.habit-card:hover .overlay {
+    background: rgba(0, 0, 0, 0.4); /* darker on hover */
 }
 
 .habit-card::before {
