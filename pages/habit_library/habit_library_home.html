@@ -1,11 +1,11 @@
 <script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
+    var gk_isXlsx = false;
+    var gk_xlsxFileLookup = {};
+    var gk_fileData = {};
+    function filledCell(cell) {
+        return cell !== '' && cell != null;
+    }
+    function loadFileData(filename) {
         if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
             try {
                 var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
@@ -19,11 +19,11 @@
 
                 // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
                 var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                    row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
                 );
                 // Fallback
                 if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
+                    headerRowIndex = 0;
                 }
 
                 // Convert filtered JSON back to CSV
@@ -36,21 +36,27 @@
             }
         }
         return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+    }
+</script>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Organized collection of Habits.">
-    <meta name="keywords" content="habit tracker, productivity, personal growth, self-improvement, habit formation, tracking habits">
+    <meta name="keywords"
+        content="habit tracker, productivity, personal growth, self-improvement, habit formation, tracking habits">
     <meta name="author" content="Habit Tracker - Habit Card by Jithin">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="https://github.com/MountZoft/mountzoft.github.io/blob/460f1a3107e45a455c329ea2089ef2c10b62cf7b/assets/images/logo.png" type="image/png">
+    <link rel="icon"
+        href="https://github.com/MountZoft/mountzoft.github.io/blob/460f1a3107e45a455c329ea2089ef2c10b62cf7b/assets/images/logo.png"
+        type="image/png">
     <title>HABIT LIBRARY</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
 </head>
+
 <body>
     <header>
         <h1>HABIT LIBRARY</h1>
@@ -61,18 +67,18 @@
     </header>
     <main>
         <div class="habit-grid" id="habitGrid"></div>
-    </br>
-    </br>
-    </br>
-    <footer>
-        <div class="footer-content">
-            <p>Small Habits, Big Changes — Start Today!</p>
-            <a href="https://play.google.com/store/apps/details?id=habit.tracker.habitcard">
-                <img src="https://github.com/MountZoft/mountzoft.github.io/raw/7cbc31c1946d6e1b4523dca1b5a4f6a596bdbcfb/assets/images/play_store_badge.png"
-                    alt="Get It On Google Play" class="play-store-badge">
-            </a>
-        </div>
-    </footer>
+        </br>
+        </br>
+        </br>
+        <footer>
+            <div class="footer-content">
+                <p>Small Habits, Big Changes — Start Today!</p>
+                <a href="https://play.google.com/store/apps/details?id=habit.tracker.habitcard">
+                    <img src="https://github.com/MountZoft/mountzoft.github.io/raw/7cbc31c1946d6e1b4523dca1b5a4f6a596bdbcfb/assets/images/play_store_badge.png"
+                        alt="Get It On Google Play" class="play-store-badge">
+                </a>
+            </div>
+        </footer>
     </main>
     <script>
         let habitsData = [];
@@ -131,7 +137,12 @@
                 card.href = `habit_blog.html?id=${habit.habit_id}`;
                 card.target = '_blank';
                 card.style.backgroundImage = `url(${habit.thumbnail_url})`;
-                card.innerHTML = `<h2>${habit.habit_name}</h2>`;
+                card.innerHTML = `
+                    <div class="habit-text">
+                    <h2>${habit.habit_name}</h2>
+                    <p class="habit-subtitle">${habit.habit_blog_title}</p>
+                    </div>
+                `;
                 habitGrid.appendChild(card);
             });
         }
@@ -144,4 +155,5 @@
         });
     </script>
 </body>
+
 </html>
