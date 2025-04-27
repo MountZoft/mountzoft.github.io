@@ -130,6 +130,12 @@ h1 {
     max-width: 90%;
 }
 
+.full-width-image {
+    width: 100%;
+    height: auto; /* Maintain the image's natural height */
+    display: block; /* Removes small whitespace below image */
+}
+
 .habit-card:hover .overlay {
     background: rgba(0, 0, 0, 0.4); /* darker on hover */
 }
