@@ -90,20 +90,17 @@ h1 {
 }
 
 .habit-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
     padding: 1rem;
-    max-width: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .habit-card {
-    flex: 0 0 auto;
-    width: 180px; /* Or adjust size you want */
-    aspect-ratio: 4/5;
+    position: relative;
+    aspect-ratio: 4 / 5;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -113,7 +110,6 @@ h1 {
     border-radius: 8px;
     text-decoration: none;
     overflow: hidden;
-    scroll-snap-align: start;
 }
 
 .habit-card .overlay {
@@ -122,16 +118,6 @@ h1 {
     background: rgba(0, 0, 0, 0);
     transition: background 0.3s ease;
     z-index: 1;
-}
-
-.habit-text {
-    position: relative;
-    z-index: 2; /* Higher than overlay */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-    padding: 10px 14px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Elevation effect */
-    max-width: 90%;
 }
 
 .habit-card:hover .overlay {
@@ -268,10 +254,8 @@ footer {
     }
 
     .habit-grid {
-        height: calc((100vw / 5) * 2); /* Based on card aspect ratio */
-        max-height: 500px; /* Optional limit */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
-    
 
     .habit-card h2 {
         font-size: 1rem;
