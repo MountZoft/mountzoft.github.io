@@ -73,13 +73,39 @@ h1 {
 }
 
 .habit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
     gap: 16px;
     padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    overflow-x: auto;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
+
+.habit-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.habit-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.habit-grid::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.habit-card {
+    flex: 0 0 auto; /* Prevent wrapping */
+    width: 200px; /* Fixed width */
+    height: 300px; /* Optional: set a height for consistency */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 
 .habit-card {
     position: relative;
@@ -250,10 +276,6 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 1.8rem;
-    }
-
-    .habit-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
     .habit-card h2 {
