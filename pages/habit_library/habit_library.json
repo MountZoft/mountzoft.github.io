@@ -300,34 +300,5 @@
         "tag_name": "Morning"
       }
     ]
-  },
-  {
-    "habit_id": "test_habit",
-    "habit_name": "Test Habit",
-    "habit_blog_title": "A Naturally Sweet Boost for Your Body",
-    "thumbnail_url": "https://i.pinimg.com/736x/95/91/cb/9591cbcd209c2f670ead3e1b72c2c40c.jpg",
-    "custom_content_data_top": "",
-    "section_1_title": "What nutrients does your body get from dates, and what body functions are they used for?",
-    "section_1": "Dates help support brain function, heart health, digestion, and energy levels. Dates are also rich in antioxidants, which protect your body’s cells and support your immune system. They're a smart snack when you need quick energy and long-lasting fuel.",
-    "section_2_title": "How many dates should I eat in a day?",
-    "section_2": "Eating 3 dates a day is a healthy amount for most people. If you’re active or need an energy boost, you can have a few more. They work well as a morning snack, pre-workout bite, or a natural dessert after meals.",
-    "section_3_title": "What are the different types of dates, and how does each one improve body health?</br>",
-    "section_3": "<table style=\"width:100%; border-collapse: collapse;\"><thead><tr><th style=\"text-align:left; padding: 8px;\">DATES</th><th style=\"text-align:left; padding: 8px;\">VARIETY</th><th style=\"text-align:left; padding: 8px;\">INGREDIENTS</th><th style=\"text-align:left; padding: 8px;\">BENEFITS</th></tr></thead><tbody><tr><td style=\"padding: 8px;\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/%C5%9Awie%C5%BCy_daktyle_odmiany_MEDJOOL.jpg/1200px-%C5%9Awie%C5%BCy_daktyle_odmiany_MEDJOOL.jpg\" alt=\"Medjool\" width=\"100\" height=\"100\" style=\"border-radius: 8px;\"></td><td style=\"padding: 8px;\"><span class=\"highlight-montserrat-bold\">Medjool</span></td><td style=\"padding: 8px;\">Large, soft, and sweet</td><td style=\"padding: 8px;\">Great for energy and digestion due to high fiber</td></tr><tr><td style=\"padding: 8px;\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Dattes_deglet_from_Biskra.jpg/500px-Dattes_deglet_from_Biskra.jpg\" alt=\"Deglet Noor\" width=\"100\" height=\"100\" style=\"border-radius: 8px;\"></td><td style=\"padding: 8px;\"><span class=\"highlight-montserrat-bold\">Deglet Noor</span></td><td style=\"padding: 8px;\">Smaller, firmer, and mildly sweet</td><td style=\"padding: 8px;\">Good for daily snacking and baking</td></tr><tr><td style=\"padding: 8px;\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/7/7c/Barhi_dates_Namibia.jpg\" alt=\"Barhi\" width=\"100\" height=\"100\" style=\"border-radius: 8px;\"></td><td style=\"padding: 8px;\"><span class=\"highlight-montserrat-bold\">Barhi</span></td><td style=\"padding: 8px;\">Soft and creamy</td><td style=\"padding: 8px;\">Rich in antioxidants, supports immunity</td></tr><tr><td style=\"padding: 8px;\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Emirati_Ajwa_date.jpg/500px-Emirati_Ajwa_date.jpg\" alt=\"Ajwa\" width=\"100\" height=\"100\" style=\"border-radius: 8px;\"></td><td style=\"padding: 8px;\"><span class=\"highlight-montserrat-bold\">Ajwa</span></td><td style=\"padding: 8px;\">Used in traditional wellness</td><td style=\"padding: 8px;\">Believed to support heart health</td></tr></tbody></table>",
-    "custom_content_data_bottom": "",
-    "habit_card_img_url": "https://i.pinimg.com/736x/b4/53/27/b45327bd504e703a61c6aa5d4078bdac.jpg",
-    "tags": [
-      {
-        "tag_id": "healthy_living",
-        "tag_name": "Healthy Living"
-      },
-      {
-        "tag_id": "nutrients",
-        "tag_name": "Nutrients"
-      },
-      {
-        "tag_id": "morning",
-        "tag_name": "Morning"
-      }
-    ]
   }
 ]
