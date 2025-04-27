@@ -46,6 +46,19 @@ h1 {
     padding: 0.5rem;
 }
 
+.tag-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tag-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.tag-container::-webkit-scrollbar-track {
+    background: #333;
+}
+
 @media (max-width: 400px) {
     .tag-container {
         flex-wrap: wrap;
@@ -250,6 +263,10 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 1.8rem;
+    }
+
+    .habit-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
     .habit-card h2 {
