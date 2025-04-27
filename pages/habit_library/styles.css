@@ -51,7 +51,7 @@ h1 {
 }
 
 .tag-container::-webkit-scrollbar {
-    height: 6px;
+    height: 0px;
 }
 
 .tag-container::-webkit-scrollbar-thumb {
