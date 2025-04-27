@@ -40,10 +40,14 @@ h1 {
 }
 
 .tag-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    display: flex;
     gap: 0.5rem;
+    overflow-x: auto;
     padding: 0.5rem;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    white-space: nowrap;
 }
 
 .tag-container::-webkit-scrollbar {
