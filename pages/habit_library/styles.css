@@ -123,6 +123,7 @@ h1 {
 .habit-text {
     position: relative;
     z-index: 2; /* Higher than overlay */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
     padding: 10px 14px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Elevation effect */
