@@ -40,27 +40,10 @@ h1 {
 }
 
 .tag-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 0.5rem;
-    overflow-x: auto;
     padding: 0.5rem;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-}
-
-.tag-container::-webkit-scrollbar {
-    height: 6px;
-}
-
-.tag-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
-}
-
-.tag-container::-webkit-scrollbar-track {
-    background: #333;
 }
 
 @media (max-width: 400px) {
@@ -89,14 +72,75 @@ h1 {
     background-color: #ff6600;
 }
 
+.habit-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0; /* Some space inside the section */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://your-background-image-url.com/image.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* black overlay with 50% opacity */
+    z-index: 2;
+}
+
 .habit-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    overflow-x: auto;
+    max-width: 100%;
+    height: 650px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
 }
+
+
+.habit-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.habit-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.habit-grid::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.habit-card {
+    flex: 0 0 auto; /* Prevent wrapping */
+    width: 200px; /* Fixed width */
+    height: 300px; /* Optional: set a height for consistency */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 
 .habit-card {
     position: relative;
@@ -267,10 +311,6 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 1.8rem;
-    }
-
-    .habit-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
     .habit-card h2 {
