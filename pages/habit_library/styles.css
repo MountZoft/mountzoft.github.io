@@ -102,20 +102,17 @@ h1 {
 }
 
 .habit-grid {
-    position: relative;
-    z-index: 3;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     padding: 1rem;
     overflow-x: auto;
     max-width: 100%;
-    height: 650px;
+    height: 650px; /* Enough for two rows */
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
 }
-
 
 .habit-grid::-webkit-scrollbar {
     height: 6px;
@@ -131,29 +128,15 @@ h1 {
 }
 
 .habit-card {
-    flex: 0 0 auto; /* Prevent wrapping */
-    width: 200px; /* Fixed width */
-    height: 300px; /* Optional: set a height for consistency */
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-}
-
-
-.habit-card {
-    position: relative;
-    aspect-ratio: 4 / 5;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    padding: 16px;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    overflow: hidden;
+    scroll-snap-align: start;
 }
 
 .habit-card .overlay {
