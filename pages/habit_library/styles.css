@@ -83,12 +83,12 @@ h1 {
 }
 
 .habit-grid::-webkit-scrollbar {
-    height: 6px;
+    height: 12px;
 }
 
 .habit-grid::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 3px;
+    border-radius: 6px;
 }
 
 .habit-grid::-webkit-scrollbar-track {
