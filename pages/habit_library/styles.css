@@ -40,27 +40,10 @@ h1 {
 }
 
 .tag-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 0.5rem;
-    overflow-x: auto;
     padding: 0.5rem;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-}
-
-.tag-container::-webkit-scrollbar {
-    height: 0px;
-}
-
-.tag-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
-}
-
-.tag-container::-webkit-scrollbar-track {
-    background: #333;
 }
 
 @media (max-width: 400px) {
