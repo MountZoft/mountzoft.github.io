@@ -393,7 +393,9 @@ footer {
   }
   
   .text p {
-    margin: 0.5rem 0; /* add little space between lines */
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
     font-size: 2rem;
+    margin: 0.5rem 0;
   }
+  
   
