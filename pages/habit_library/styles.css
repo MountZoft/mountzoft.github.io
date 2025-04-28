@@ -388,9 +388,12 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2rem;
     text-align: center;
-    width: 80%;
-    height: 10%;
     z-index: 3;
   }
+  
+  .text p {
+    margin: 0.5rem 0; /* add little space between lines */
+    font-size: 2rem;
+  }
+  
