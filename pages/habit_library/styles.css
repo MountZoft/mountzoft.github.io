@@ -8,17 +8,33 @@ body {
 }
 
 .library-section {
+    position: relative;
+    /* This makes sure all child elements are layered relative to this container */
     text-align: center;
     padding: 2rem 1rem;
+    overflow: hidden;
+    /* optional: if you want to clip overflowing image */
 }
 
 .library-section-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* this keeps the image nicely stretched */
     z-index: 1;
 }
 
 .library-section-content {
+    position: relative;
     z-index: 2;
+    /* ensures it appears above the background image */
+    color: white;
+    /* optional, if you want text in white */
 }
+
 
 h1 {
     font-size: 2.5rem;
@@ -104,9 +120,12 @@ h1 {
 }
 
 .habit-card {
-    flex: 0 0 auto; /* Prevent wrapping */
-    width: 200px; /* Fixed width */
-    height: 300px; /* Optional: set a height for consistency */
+    flex: 0 0 auto;
+    /* Prevent wrapping */
+    width: 200px;
+    /* Fixed width */
+    height: 300px;
+    /* Optional: set a height for consistency */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -139,22 +158,28 @@ h1 {
 
 .habit-text {
     position: relative;
-    z-index: 2; /* Higher than overlay */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    z-index: 2;
+    /* Higher than overlay */
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black */
     padding: 10px 14px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Elevation effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    /* Elevation effect */
     max-width: 90%;
 }
 
 .full-width-image {
     width: 100%;
-    height: auto; /* Maintain the image's natural height */
-    display: block; /* Removes small whitespace below image */
+    height: auto;
+    /* Maintain the image's natural height */
+    display: block;
+    /* Removes small whitespace below image */
 }
 
 .habit-card:hover .overlay {
-    background: rgba(0, 0, 0, 0.4); /* darker on hover */
+    background: rgba(0, 0, 0, 0.4);
+    /* darker on hover */
 }
 
 .habit-card:hover::before {
@@ -344,43 +369,59 @@ footer {
     height: 100%;
     width: 100%;
     overflow: hidden;
-  }
+}
 
-  .slideshow {
+.slideshow {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 1;
-  }
+}
 
-  .slide {
+.slide {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0;
     animation: fade 15s infinite;
-  }
+}
 
-  .slide:nth-child(1) {
+.slide:nth-child(1) {
     animation-delay: 0s;
-  }
-  .slide:nth-child(2) {
+}
+
+.slide:nth-child(2) {
     animation-delay: 5s;
-  }
-  .slide:nth-child(3) {
+}
+
+.slide:nth-child(3) {
     animation-delay: 10s;
-  }
+}
 
-  @keyframes fade {
-    0%   { opacity: 0; }
-    10%  { opacity: 1; }
-    30%  { opacity: 1; }
-    40%  { opacity: 0; }
-    100% { opacity: 0; }
-  }
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
 
-  .overlay {
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -388,9 +429,9 @@ footer {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 2;
-  }
+}
 
-  .vision {
+.vision {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -399,22 +440,20 @@ footer {
     font-size: 2rem;
     text-align: center;
     z-index: 3;
-  }
-  
-  .flags {
+}
+
+.flags {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 1rem;
-  }
-  
-  .flag {
+}
+
+.flag {
     width: 32px;
     height: auto;
-    border-radius: 4px; /* optional rounded corners */
-  }
-  
-  
-  
+    border-radius: 4px;
+    /* optional rounded corners */
+}
