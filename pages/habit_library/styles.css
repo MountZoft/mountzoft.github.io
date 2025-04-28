@@ -382,7 +382,7 @@ footer {
     z-index: 2;
   }
 
-  .text {
+  .vision {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -392,9 +392,10 @@ footer {
     z-index: 3;
   }
   
-  .text p {
+  .vision .subscribers-across {
     font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
     font-size: 2rem;
+    color: #ff6600;
     margin: 0.5rem 0;
   }
   
