@@ -384,6 +384,16 @@ footer {
     overflow: hidden;
 }
 
+.vision-path img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* ensures the image fills and crops nicely */
+  }
+  
+
 .slideshow {
     position: absolute;
     width: 100%;
