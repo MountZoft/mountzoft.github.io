@@ -377,10 +377,12 @@ footer {
     overflow: hidden;
 }
 
+
 .vision-path {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 100vw;
     overflow: hidden;
 }
 
@@ -388,10 +390,10 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* ensures the image fills and crops nicely */
-  }
+    width: 100%; /* Always take full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Make sure it fits width without cropping */
+}
   
 
 .slideshow {
